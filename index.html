@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Logger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Workout Logger</h1>
+    </header>
+    <main>
+        <form id="workoutForm">
+            <input type="date" id="workoutDate" required>
+            <div id="exercisesContainer">
+                <div class="exercise">
+                    <input type="text" class="exerciseName" placeholder="Exercise Name" required>
+                    <input type="number" class="sets" placeholder="Sets" required>
+                    <input type="number" class="reps" placeholder="Reps" required>
+                    <input type="number" class="weight" placeholder="Weight (lbs/kg)" required>
+                    <select class="exerciseType">
+                        <option value="regular">Regular</option>
+                        <option value="myoreps">Myo-reps</option>
+                    </select>
+                    <button type="button" class="editExercise">Edit</button>
+                </div>
+            </div>
+            <button type="button" id="addExercise">Add Another Exercise</button>
+            <button type="submit">Log Workout</button>
+        </form>
+        <button onclick="exportWorkoutsToCSV()">Export Workouts to CSV</button>
+        <div id="workoutLogs"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
